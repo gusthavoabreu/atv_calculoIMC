@@ -1,51 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
- 
-  <title>Calculo IMC</title>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Calculo IMC</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  </head>
+
+  <body>
+    <form name="imcForm" id="imcForm" action="#">
+      <h2>Calcular IMC</h2>
+      <div class="container">
+        <div class="imgcontainer">
+          <img src="imagem_imc.jpg" alt="Avatar" class="avatar">
+        </div>
+      
+        <label>Altura</label>
+        <input type="text" placeholder="Digite sua altura do tipo 1.70m" name="uname" id="uname" required>
+
+        <label>Peso</label>
+        <input type="text" placeholder="Digite seu peso do tipo 80kg" name="psw" id="psw" required>
+
+        <select name="sexo" id="select">
+          <option value="fem">Feminino</option>
+          <option value="mas">Masculino</option>
+        </select>
+        <div class="buttons">
+          <input type="reset" value="Limpar">    
+          <input name="Enviar" type="submit" value="Calcular" onclick="calcula_imc()" />
+        </div>               
+      </div>
+    </form>
+    <div id="message"></div>
+  </body>
   <script src="script.js"></script>
-
-  <!-- Custom styles for this template -->
-  <link href="style.css" rel="stylesheet">
-  
-  <script src="script.js"></script>
-</head>
-
-<body>
-
-<h2>Calcular IMC</h2>
-
-<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Calcular</button>
-
-<div id="id01" class="modal">
-  
-  <form name="imcForm" id="imcForm" class="modal-content animate" action="#">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-      <img src="imagem_imc.jpg" alt="Avatar" class="avatar">
-    </div>
-
-    <div class="container">
-      <label><b>Altura</b></label>
-      <input type="text" placeholder="Digite sua altura" name="uname" id="uname" required>
-
-      <label><b>Peso</b></label>
-      <input type="text" placeholder="Digite seu peso" name="psw" id="psw" required>
-        
-       <p><input  name="Enviar" type="submit" value="Calcular" onclick="calcula_imc()" />
-            </p>
- </form>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancelar</button>
-    </div>
- 
-</div>
-
-
-</body>
 </html>
