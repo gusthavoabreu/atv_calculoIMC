@@ -10,30 +10,31 @@
   </head>
 
   <body>
-    <form name="imcForm" id="imcForm" action="#">
       <h2>Calcular IMC</h2>
       <div class="container">
+        <div id="form">
         <div class="imgcontainer">
           <img src="imagem_imc.jpg" alt="Avatar" class="avatar">
         </div>
       
-        <label>Altura</label>
-        <input type="text" placeholder="Digite sua altura do tipo 1.70m" name="uname" id="uname" required>
+        <label>Altura</label><br />
+        <input type="text" placeholder="Digite sua altura em cm" name="altura" id="altura" required>
 
-        <label>Peso</label>
-        <input type="text" placeholder="Digite seu peso do tipo 80kg" name="psw" id="psw" required>
-
+        <br /><label>Peso</label><br />
+        <input type="text" placeholder="Digite seu peso em kg" name="peso" id="peso" required>
         <select name="sexo" id="select">
-          <option value="fem">Feminino</option>
-          <option value="mas">Masculino</option>
-        </select>
-        <div class="buttons">
-          <input type="reset" value="Limpar">    
-          <input name="Enviar" type="submit" value="Calcular" onclick="calcula_imc()" />
-        </div>               
+                    <option value="fem">Feminino</option>
+                    <option value="mas">Masculino</option>
+                </select>
+        <div class="buttons"><br />
+          <button id="limpar" onclick="refresh()" value="Limpar">Limpar</button>
+<br /><button onclick="calcularIMC()" value="Calcular">Calcular</button>
+                
+                </div>
+        </div>    
+        <div id="message"></div>           
       </div>
-    </form>
-    <div id="message"></div>
+    
   </body>
   <script src="script.js"></script>
 </html>
